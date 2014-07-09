@@ -11,7 +11,7 @@ include<bearings.scad>
 
 $fn = 96;
 
-render_part(1);
+render_part(5);
 
 module render_part(part_to_render) {
 	if (part_to_render == 1) end_motor();
@@ -84,7 +84,7 @@ d_clamp_screw_nut = d_M3_nut;
 
 // syringe pump:
 d_plunger = 32; // diameter of the plunger end
-d_syringe = 25; // diameter of the syringe body - sets size of syringe holder
+d_syringe = 33; // diameter of the syringe body - sets size of syringe holder
 t_hook = 5; // thickness of the hook for securing syringe to actuator
 d_plunger_max = 32; // this sets the spacing for screws on the plunger retainer and carriage
 d_plunger_retainer = d_plunger_max + 12;
