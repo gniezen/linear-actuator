@@ -84,7 +84,7 @@ d_clamp_screw_nut = d_M3_nut;
 
 // syringe pump:
 d_plunger = 32; // diameter of the plunger end
-d_syringe = 33; // diameter of the syringe body - sets size of syringe holder
+d_syringe = 32.5; // diameter of the syringe body - sets size of syringe holder
 t_hook = 5; // thickness of the hook for securing syringe to actuator
 d_plunger_max = 32; // this sets the spacing for screws on the plunger retainer and carriage
 d_plunger_retainer = d_plunger_max + 12;
@@ -398,7 +398,7 @@ module clamp_syringe_pump() {
 		end_mount_holes(t_syringe_clamp + 1, d_M3_screw);
 
 		translate([0, 0, t_syringe_clamp / 2])
-			end_mount_holes(h_M3_nut * 2, d_M3_nut, 6);
+			end_mount_holes(h_M3_nut * 2, d_M3_nut+0.5, 6); //TODO: remove this if d_M3_nut is enlarged
 
 		// guide rods
 		for (i = [-1, 1])

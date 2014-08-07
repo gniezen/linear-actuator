@@ -7,17 +7,15 @@ void setup() {
 }
 
 void loop() {
-  int i;
   
   digitalWrite(dirpin, LOW);     // Set the direction.
-  delay(100);
-
+  delay(1000); //time between steps in ms
   
-  for (i = 0; i<300; i++)       .
+  for (int i = 0; i<10; i++)     // number of microsteps at one time  
   {
-    digitalWrite(steppin, LOW);  // This LOW to HIGH change is what creates the
-    digitalWrite(steppin, HIGH); // "Rising Edge" so the easydriver knows to when to step.
-    delayMicroseconds(1000);      // This delay time is close to top speed for this
-  }                              // particular motor. Any faster the motor stalls.
+    digitalWrite(steppin, LOW); 
+    digitalWrite(steppin, HIGH); // Creates 'rising edge'
+    delayMicroseconds(5000); //motor speed     
+  }                             
         
 }
